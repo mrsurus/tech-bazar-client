@@ -1,0 +1,134 @@
+[
+    {
+        "category": "Laptop",
+        "name": "HP 15s",
+        "img": "https://images.pexels.com/photos/1006293/pexels-photo-1006293.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "location": "Mirpur",
+        "seller": "Abdullah",
+        "used_year": 2,
+        "date": "5-3-23",
+        "original_price": "3300",
+        "price": 200
+    },
+    {
+        "category": "Laptop",
+        "name": "Lenevo ideapad",
+        "img": "https://images.pexels.com/photos/1006293/pexels-photo-1006293.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "location": "New Market",
+        "seller": "Narain",
+        "used_year": 2.5,
+        "date": "4-9-23",
+        "original_price": "3300",
+        "price": 220
+    },
+    {
+        "category": "Mobile",
+        "name": "OnePlus nord CE2",
+        "img": "https://images.pexels.com/photos/10343717/pexels-photo-10343717.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "location": "Shamoli",
+        "seller": "Shadat Mia",
+        "used_year": 1.3,
+        "date": "3-2-23",
+        "original_price": "330",
+        "price": 210
+    },
+    {
+        "category": "Mobile",
+        "name": "iPhone 14 pro",
+        "img": "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "location": "Savar, Dhaka",
+        "seller": "Sunil",
+        "used_year": 1,
+        "date": "15-2-23",
+        "original_price": "1200",
+        "price": 870
+    },
+    {
+        "category": "iPad",
+        "name": "iPad Pro",
+        "img": "https://images.pexels.com/photos/3082341/pexels-photo-3082341.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "location": "Shamoli",
+        "seller": "Khairul Islam",
+        "used_year": 1.00,
+        "date": "23-2-23",
+        "original_price": "1300",
+        "price": 710
+    },
+    {
+        "category": "iPad",
+        "name": "iPad Air",
+        "img": "https://images.pexels.com/photos/4453106/pexels-photo-4453106.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "location": "Savar, Dhaka",
+        "seller": "Sunil",
+        "used_year": 1,
+        "date": "1-2-23",
+        "original_price": "1100",
+        "price": 780
+    },
+    {
+        "category": "Camera",
+        "name": "Canon EOS",
+        "img": "https://images.pexels.com/photos/243757/pexels-photo-243757.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "location": "Shamoli",
+        "seller": "Bashar",
+        "used_year": 1.00,
+        "date": "23-2-23",
+        "original_price": "1100",
+        "price": 680
+    },
+    {
+        "category": "Camera",
+        "name": "Canon Log 3",
+        "img": "https://images.pexels.com/photos/274973/pexels-photo-274973.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "location": "Savar, Dhaka",
+        "seller": "Mahmud",
+        "used_year": 0.5,
+        "date": "21-1-23",
+        "original_price": "500",
+        "price": 350
+    },
+    {
+        "category": "Headphone",
+        "name": "Samsung 5kt",
+        "img": "https://images.pexels.com/photos/901236/pexels-photo-901236.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "location": "Uttor Badda",
+        "seller": "Mustak",
+        "used_year": 1.00,
+        "date": "23-2-23",
+        "original_price": "50",
+        "price": 39
+    },
+    {
+        "category": "Headphone",
+        "name": "Lenevo 34p",
+        "img": "https://images.pexels.com/photos/3945667/pexels-photo-3945667.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "location": "Hathazari, Chittagong",
+        "seller": "Milan",
+        "used_year": 1.3,
+        "date": "4-2-23",
+        "original_price": "40",
+        "price": 28
+    },
+    {
+        "category": "Watch",
+        "name": "Rolex",
+        "img": "https://images.pexels.com/photos/364822/rolex-watch-time-luxury-364822.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "location": "Khulna ",
+        "seller": "Abdur Rahman",
+        "used_year": 1.00,
+        "date": "15-1-23",
+        "original_price": "500",
+        "price": 380
+    },
+    {
+        "category": "Watch",
+        "name": "Titan",
+        "img": "https://images.pexels.com/photos/280250/pexels-photo-280250.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "location": "Rampura Dhaka",
+        "seller": "Shadin",
+        "used_year": 1.00,
+        "date": "14-2-23",
+        "original_price": "60",
+        "price": 45
+    }
+]
