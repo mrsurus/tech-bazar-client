@@ -15,6 +15,8 @@ import AdminRoute from "./AdminRoute";
 import AllBuyer from "../Componets/Dashbord/Admin/Allbuyer";
 import AllSeller from "../Componets/Dashbord/Admin/Allseller";
 import Blog from "../Componets/Blog/Blog";
+import Payment from "../Componets/Dashbord/Payment/Payment";
+import DisplayError from "../Componets/Shared/DisplayError/DisplayError";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -23,6 +25,7 @@ const route = createBrowserRouter(
         {
             path:'/',
             element: <Main></Main>,
+            errorElement: <DisplayError></DisplayError>,
             children: [
                 {
                     path: '/',
@@ -42,7 +45,7 @@ const route = createBrowserRouter(
                 },
                 {
                     path: '/category/:category',
-                    loader: ({params}) => fetch(`http://localhost:5000/products/${params.category}`),
+                    loader: ({params}) => fetch(`https://tech-bazar-server2.vercel.app/products/${params.category}`),
                     element: <PrivateRoute><Products></Products></PrivateRoute>
                 }
             ]
@@ -75,6 +78,12 @@ const route = createBrowserRouter(
                     path: '/dashboard/allseller',
                     element:<AdminRoute><AllSeller></AllSeller></AdminRoute>
                 },
+                {
+                    path: '/dashboard/payment/:id',
+                    element: <BuyerRoute><Payment></Payment></BuyerRoute>,
+                    loader: ({params}) => fetch(`https://tech-bazar-server2.vercel.app/order/${params.id}`)
+                    
+                }
 
             ]
         }

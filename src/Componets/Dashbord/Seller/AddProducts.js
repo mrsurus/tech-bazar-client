@@ -48,7 +48,7 @@ const AddProducts = () => {
             sellerStatus: sellerStatus
         }
         
-        fetch(`http://localhost:5000/products`,{
+        fetch(`https://tech-bazar-server2.vercel.app/products`,{
             method:'POST',
             headers:{
                 'content-type': 'application/json'

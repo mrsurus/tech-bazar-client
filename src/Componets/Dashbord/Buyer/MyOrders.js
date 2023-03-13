@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 
 const MyOrders = () => {
@@ -8,14 +9,14 @@ const MyOrders = () => {
     const { data: orders = [],refetch } = useQuery({
         queryKey: ['orders', user?.email,],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/orders?email=${user?.email}`)
+            const res = await fetch(`https://tech-bazar-server2.vercel.app/orders?email=${user?.email}`)
             const data = await res.json()
             return data
         }
     })
 
     const handleDeleteOrder =(id)=>{
-        fetch(`http://localhost:5000/orders/${id}`,{
+        fetch(`https://tech-bazar-server2.vercel.app/orders/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -65,7 +66,10 @@ const MyOrders = () => {
                                 </td>
                                 <td>{order.price}$</td>
                                 <th>
-                                    <button className="btn ">Pay</button>
+                                    {
+                                        order.price && !order.paid && 
+                                        <Link to={`/dashboard/payment/${order._id}`}><button className="btn ">Pay</button></Link>
+                                    }
                                 </th>
                             </tr>
                         </tbody>)

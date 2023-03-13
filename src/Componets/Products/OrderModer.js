@@ -25,7 +25,7 @@ const OrderModal = ({modalInfo,setModalInfo}) => {
             img:img
         }
         
-        fetch('http://localhost:5000/orders',{
+        fetch('https://tech-bazar-server2.vercel.app/orders',{
             method: 'POST',
             headers: {
                 'content-type':'application/json'

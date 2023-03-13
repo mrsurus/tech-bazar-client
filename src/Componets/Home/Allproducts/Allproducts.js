@@ -10,7 +10,7 @@ const Allproducts = () => {
     const {data :allproducts=[]} = useQuery({
         queryKey : ['allproducts'],
         queryFn: async ()=>{
-            const res = await fetch(`http://localhost:5000/allproducts`)
+            const res = await fetch(`https://tech-bazar-server2.vercel.app/allproducts`)
             const data = await res.json()
             return data
         }

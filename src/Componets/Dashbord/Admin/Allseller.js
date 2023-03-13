@@ -6,14 +6,14 @@ const AllSeller = () => {
   const { data: sellers = [], refetch } = useQuery({
     queryKey: ['users'],
     queryFn: async () => {
-      const res = await fetch('http://localhost:5000/users/allseller')
+      const res = await fetch('https://tech-bazar-server2.vercel.app/users/allseller')
       const data = await res.json()
       return data
     }
   })
 
   const handleDeleteBuyer = (id) => {
-    fetch(`http://localhost:5000/users/${id}`, {
+    fetch(`https://tech-bazar-server2.vercel.app/users/${id}`, {
       method: 'DELETE'
     })
       .then(res => res.json())
@@ -32,7 +32,7 @@ const AllSeller = () => {
   }
 
   const handleVarified = id => {
-    fetch(`http://localhost:5000/users/verify/${id}`, {
+    fetch(`https://tech-bazar-server2.vercel.app/users/verify/${id}`, {
       method: 'PUT'
     })
       .then(res => res.json())
