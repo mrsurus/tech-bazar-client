@@ -45,7 +45,7 @@ const route = createBrowserRouter(
                 },
                 {
                     path: '/category/:category',
-                    loader: ({params}) => fetch(`https://tech-bazar-server2.vercel.app/products/${params.category}`),
+                    loader: ({params}) => fetch(`https://tech-bazar2-server.vercel.app/products/${params.category}`),
                     element: <PrivateRoute><Products></Products></PrivateRoute>
                 }
             ]
@@ -81,7 +81,7 @@ const route = createBrowserRouter(
                 {
                     path: '/dashboard/payment/:id',
                     element: <BuyerRoute><Payment></Payment></BuyerRoute>,
-                    loader: ({params}) => fetch(`https://tech-bazar-server2.vercel.app/order/${params.id}`)
+                    loader: ({params}) => fetch(`https://tech-bazar2-server.vercel.app/order/${params.id}`)
                     
                 }
 

@@ -6,14 +6,14 @@ const AllSeller = () => {
   const { data: sellers = [], refetch } = useQuery({
     queryKey: ['users'],
     queryFn: async () => {
-      const res = await fetch('https://tech-bazar-server2.vercel.app/users/allseller')
+      const res = await fetch('https://tech-bazar2-server.vercel.app/users/allseller')
       const data = await res.json()
       return data
     }
   })
 
   const handleDeleteBuyer = (id) => {
-    fetch(`https://tech-bazar-server2.vercel.app/users/${id}`, {
+    fetch(`https://tech-bazar2-server.vercel.app/users/${id}`, {
       method: 'DELETE'
     })
       .then(res => res.json())
@@ -32,7 +32,7 @@ const AllSeller = () => {
   }
 
   const handleVarified = id => {
-    fetch(`https://tech-bazar-server2.vercel.app/users/verify/${id}`, {
+    fetch(`https://tech-bazar2-server.vercel.app/users/verify/${id}`, {
       method: 'PUT'
     })
       .then(res => res.json())
@@ -40,7 +40,7 @@ const AllSeller = () => {
         refetch()
         Swal.fire(
           'Good job!',
-          'You make this seller admin',
+          'You make this seller verified',
           'success'
         )
         console.log(data);
@@ -68,7 +68,10 @@ const AllSeller = () => {
                   <th>{i + 1}</th>
                   <td>{seller.name}</td>
                   <td>{seller.email}</td>
-                  <td onClick={() => handleVarified(seller._id)} >{!seller.status && <button className='btn'>verify</button>}</td>
+                  {
+                    seller.status? <td className='text-green-500'>verified</td> :
+                     <td onClick={() => handleVarified(seller._id)} ><button className='btn'>verify</button></td>
+                  }
                   <td onClick={() => handleDeleteBuyer(seller._id)} className='btn btn-error my-5 '>X</td>
                 </tr>
               </tbody>

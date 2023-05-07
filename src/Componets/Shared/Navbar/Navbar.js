@@ -39,7 +39,7 @@ const Navbar = () => {
                     </div>
                     <div className='w-10 ml-10'><img className='w-full' src="" alt="" /></div>
                     <div className='flex  '>
-                        <img className='w-10 mt-1 h-10 f' src="https://icon-library.com/images/free-maintenance-icon/free-maintenance-icon-29.jpg" alt="" />
+                       
                         <Link className="btn btn-ghost normal-case text-3xl font-semibold  ">Tech Bazar</Link>
                     </div>
                 </div>
@@ -49,6 +49,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className='navbar-end'>
+                    <div>
+                    <img className='w-20 mt-1 mr-10 h-10 hidden lg:block' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHVpvLJNFTwUtFqckRdN5A5g9XZGuU5gqeJw&usqp=CAU" alt="" />
+                    </div>
                     <label htmlFor="my-drawer-2" tabIndex={0} className="btn btn-ghost lg:hidden">
                         <p><small className='text-blue-900'>Dashbord</small></p>
                     </label>

@@ -9,7 +9,7 @@ const MyProducts = () => {
     const { data: myproducts = [] } = useQuery({
         queryKey: ['products'],
         queryFn: async () => {
-            const res = await fetch(`https://tech-bazar-server2.vercel.app/products?email=${user?.email}`)
+            const res = await fetch(`https://tech-bazar2-server.vercel.app/products?email=${user?.email}`)
             const data = await res.json()
             return data
         }
@@ -34,7 +34,7 @@ const MyProducts = () => {
         }
         console.log(adDataInfo)
 
-        fetch(`https://tech-bazar-server2.vercel.app/advertise`,{
+        fetch(`https://tech-bazar2-server.vercel.app/advertise`,{
             method:'POST',
             headers:{
                 'content-type': 'application/json'

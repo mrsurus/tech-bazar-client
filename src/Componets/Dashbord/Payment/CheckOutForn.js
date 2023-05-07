@@ -1,6 +1,5 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
-import { json } from 'react-router-dom';
 
 const CheckOutForn = ({ data }) => {
     const stripe = useStripe()
@@ -14,7 +13,7 @@ const CheckOutForn = ({ data }) => {
     console.log(data);
 
     useEffect(() => {
-        fetch("https://tech-bazar-server2-mrsurus.vercel.app/create-payment-intent", {
+        fetch("https://tech-bazar2-server.vercel.app/create-payment-intent", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ price }),
@@ -81,7 +80,7 @@ const CheckOutForn = ({ data }) => {
                 OrderId: _id
 
             }
-            fetch("https://tech-bazar-server2-mrsurus.vercel.app/payments", {
+            fetch("https://tech-bazar2-server.vercel.app/payments", {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -124,7 +123,8 @@ const CheckOutForn = ({ data }) => {
                 />
                 <button className='btn btn-sm btn-success mt-10'
                     type="submit"
-                    disabled={!stripe || !clientSecret || processing}>
+                    disabled={!stripe || !clientSecret || processing}
+                    >
                     Pay
                 </button>
             </form>

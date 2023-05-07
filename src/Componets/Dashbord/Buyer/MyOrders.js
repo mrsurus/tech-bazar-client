@@ -9,14 +9,14 @@ const MyOrders = () => {
     const { data: orders = [],refetch } = useQuery({
         queryKey: ['orders', user?.email,],
         queryFn: async () => {
-            const res = await fetch(`https://tech-bazar-server2.vercel.app/orders?email=${user?.email}`)
+            const res = await fetch(`https://tech-bazar2-server.vercel.app/orders?email=${user?.email}`)
             const data = await res.json()
             return data
         }
     })
 
     const handleDeleteOrder =(id)=>{
-        fetch(`https://tech-bazar-server2.vercel.app/orders/${id}`,{
+        fetch(`https://tech-bazar2-server.vercel.app/orders/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())

@@ -48,7 +48,7 @@ const AddProducts = () => {
             sellerStatus: sellerStatus
         }
         
-        fetch(`https://tech-bazar-server2.vercel.app/products`,{
+        fetch(`https://tech-bazar2-server.vercel.app/products`,{
             method:'POST',
             headers:{
                 'content-type': 'application/json'
@@ -89,7 +89,7 @@ const AddProducts = () => {
                         <option>Headphone</option>
                         <option>Watch</option>
                     </select>
-                    <p className='text-xl'>Price:</p>
+                    <p className='text-xl mt-3'>Price:</p>
                     <input type="text" className='input input-bordered w-full mb-3 ' placeholder='Price' name="price" id="" required />
                     <p className='text-xl'>Location:</p>
                     <input type="text" className='input input-bordered w-full mb-3 ' placeholder='Location' name="location" id="" required />

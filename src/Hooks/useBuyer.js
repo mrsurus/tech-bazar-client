@@ -6,7 +6,7 @@ const useBuyer = email =>{
 
     useEffect( ()=>{
         if(email){
-            fetch(`https://tech-bazar-server2.vercel.app/users/buyer/${email}`)
+            fetch(`https://tech-bazar2-server.vercel.app/users/buyer/${email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -16,5 +16,6 @@ const useBuyer = email =>{
         }
     },[email])
     return[isBuyer, isBuyerLoading]
+    
 }
 export default useBuyer;

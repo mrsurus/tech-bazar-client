@@ -29,7 +29,7 @@ const SignUp = () => {
                             email: data.email,
                             isSeller: checkvalue
                         }
-                        fetch('https://tech-bazar-server2.vercel.app/users', {
+                        fetch('https://tech-bazar2-server.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'

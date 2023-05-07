@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const Login = () => {
@@ -16,6 +17,11 @@ const Login = () => {
         signIn(data.email, data.password)
             .then(res => {
                 navigate(from, { replace: true })
+                Swal.fire(
+                    'Good job!',
+                    'successfully log in!',
+                    'success'
+                  )
             })
             .catch(err => setLoginError(err.message))
     }

@@ -6,7 +6,7 @@ const useAdmin = email =>{
 
     useEffect( ()=>{
         if(email){
-            fetch(`https://tech-bazar-server2.vercel.app/users/admin/${email}`)
+            fetch(`https://tech-bazar2-server.vercel.app/users/admin/${email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
